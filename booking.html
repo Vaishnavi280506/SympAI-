@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Summary — MediConnect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body class="page-booking">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="doctor.html" class="navbar-logo">
+      <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <span>Symp<em>AI</em></span>
+    </a>
+    <a href="form.html" class="navbar-back-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+  </nav>
+
+  <div class="page-wrapper" style="width:100%;">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb" style="max-width:580px;">
+      <a href="doctor.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <a href="overview.html">Dr. Sarah Johnson</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <a href="book-consultation.html">Book</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Review & Pay</span>
+    </div>
+
+    <div class="booking-container">
+
+      <!-- Progress Steps -->
+      <div class="progress-steps">
+        <div class="step done">
+          <div class="step-circle"><i class="fa-solid fa-check" style="font-size:11px;"></i></div>
+          <div class="step-label">Choose</div>
+        </div>
+        <div class="step-line done"></div>
+        <div class="step done">
+          <div class="step-circle"><i class="fa-solid fa-check" style="font-size:11px;"></i></div>
+          <div class="step-label">Details</div>
+        </div>
+        <div class="step-line done"></div>
+        <div class="step active">
+          <div class="step-circle">3</div>
+          <div class="step-label">Review</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-circle"><i class="fa-solid fa-check" style="font-size:11px;"></i></div>
+          <div class="step-label">Confirmed</div>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <h3><i class="fa-solid fa-clipboard-list"></i> Booking Summary</h3>
+
+        <div class="doctor-mini">
+          <img src="https://via.placeholder.com/56/245f37/fff?text=SJ" alt="Doctor">
+          <div>
+            <h2>Dr. Sarah Johnson</h2>
+            <p>Cardiology · <span style="color:#f5c518;">★ 4.9</span> (234 reviews)</p>
+          </div>
+        </div>
+
+        <div class="summary-row"><span>Consultation Type</span><strong>Video Call</strong></div>
+        <div class="summary-row"><span>Date & Time</span><strong>Tomorrow · 11:30 AM</strong></div>
+        <div class="summary-row"><span>Duration</span><strong>30 minutes</strong></div>
+        <div class="summary-row"><span>Patient</span><strong>John Doe</strong></div>
+
+        <div class="total-price">$50.00</div>
+
+        <p style="color:#666;font-size:13px;margin-bottom:10px;">Payment Method</p>
+        <div class="payment-method-box">
+          <div class="payment-icon">💳</div>
+          <div>
+            <strong>Credit Card</strong>
+            <p>Secure payment processing via Stripe</p>
+          </div>
+        </div>
+
+        <div class="secure-box">
+          <i class="fa-solid fa-lock" style="color:#018553;"></i>
+          Your information is protected with end-to-end encryption.
+        </div>
+
+        <div class="booking-buttons">
+          <button type="button" class="btn-back-booking" onclick="location.href='form.html'">
+             Back
+          </button>
+          <button class="btn-pay" id="payBtn" onclick="handlePay()">
+            <div class="spinner"></div>
+            <span class="btn-text"><i class="fa-solid fa-lock"></i> Pay & Book</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="doctor.js"></script>
+</body>
+</html>

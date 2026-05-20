@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SympAI — Find a Doctor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="doctor.html" class="navbar-logo">
+      <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <span>Symp<em>AI</em></span>
+    </a>
+    <div class="navbar-links">
+      <a href="#">Find Doctors</a>
+      <a href="#">Specialties</a>
+      <a href="#">How It Works</a>
+      <a href="#" class="navbar-cta">Sign In</a>
+    </div>
+  </nav>
+
+  <div class="main-container">
+
+    <div class="hero">
+      <div class="hero-badge"><i class="fa-solid fa-circle-check"></i> 500+ Verified Doctors</div>
+      <h1>Find Your Perfect<br><span class="highlight">Doctor</span></h1>
+      <p>Browse verified healthcare professionals and book your consultation in minutes.</p>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Verified Doctors</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">50K+</div>
+          <div class="stat-label">Happy Patients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">Specialties</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Avg Rating</div>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search" placeholder="Search by name or specialty...">
+        <select id="specialty">
+          <option value="">All Specialties</option>
+          <option value="Cardiologist">Cardiologist</option>
+          <option value="Dermatologist">Dermatologist</option>
+          <option value="Neurologist">Neurologist</option>
+          <option value="Orthopedic">Orthopedic</option>
+          <option value="Pediatrician">Pediatrician</option>
+          <option value="Psychiatrist">Psychiatrist</option>
+        </select>
+        <select id="sort">
+          <option value="rating">Highest Rated</option>
+          <option value="experience">Most Experienced</option>
+          <option value="fee">Lowest Fee</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="results-count"><span id="count">6</span> doctors found</div>
+
+    <section class="doctor-list" id="doctorList">
+
+      <div class="skeleton-box" id="skel1">
+        <div class="skel skel-avatar"></div>
+        <div class="skel-info">
+          <div class="skel skel-title"></div>
+          <div class="skel skel-sub"></div>
+          <div class="skel skel-sub2"></div>
+          <div class="skel skel-btns"></div>
+        </div>
+      </div>
+      <div class="skeleton-box" id="skel2">
+        <div class="skel skel-avatar"></div>
+        <div class="skel-info">
+          <div class="skel skel-title"></div>
+          <div class="skel skel-sub"></div>
+          <div class="skel skel-sub2"></div>
+          <div class="skel skel-btns"></div>
+        </div>
+      </div>
+
+      <div class="doctor-box" data-name="dr sarah johnson" data-specialty="Cardiologist" data-rating="4.9" data-experience="10" data-fee="50" style="display:none;">
+        <div class="doctor-avatar">
+          <img src="doctor1.jpeg" alt="Dr Sarah Johnson" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="online-dot"></div>
+        </div>
+        <div class="doctor-info">
+          <h2>Dr. Sarah Johnson</h2>
+          <div class="specialty">Cardiologist</div>
+          <div class="meta"><i class="fa-solid fa-briefcase" style="color:#444;font-size:11px;"></i> 10+ years &nbsp;·&nbsp; <i class="fa-solid fa-location-dot" style="color:#444;font-size:11px;"></i> New York, NY</div>
+          <div class="star-rating">
+            <div class="stars-visual">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="rating-text"><strong>4.9</strong> (234 reviews)</div>
+          </div>
+          <div class="btn-group">
+            <a href="overview.html?id=0" class="btn btn-primary"><i class="fa-solid fa-user"></i> View Profile</a>
+            <a href="book-consultation.html" class="btn btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-box" data-name="dr emily rodriguez" data-specialty="Dermatologist" data-rating="4.8" data-experience="7" data-fee="45" style="display:none;">
+        <div class="doctor-avatar">
+          <img src="doctor3.jpeg" alt="Dr Emily Rodriguez" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="online-dot"></div>
+        </div>
+        <div class="doctor-info">
+          <h2>Dr. Emily Rodriguez</h2>
+          <div class="specialty">Dermatologist</div>
+          <div class="meta"><i class="fa-solid fa-briefcase" style="color:#444;font-size:11px;"></i> 7+ years &nbsp;·&nbsp; <i class="fa-solid fa-location-dot" style="color:#444;font-size:11px;"></i> Los Angeles, CA</div>
+          <div class="star-rating">
+            <div class="stars-visual">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="rating-text"><strong>4.8</strong> (187 reviews)</div>
+          </div>
+          <div class="btn-group">
+            <a href="overview.html?id=1" class="btn btn-primary"><i class="fa-solid fa-user"></i> View Profile</a>
+            <a href="book-consultation.html" class="btn btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-box" data-name="dr michael chen" data-specialty="Neurologist" data-rating="4.9" data-experience="12" data-fee="60" style="display:none;">
+        <div class="doctor-avatar">
+          <img src="doctor2.jpeg" alt="Dr Michael Chen" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="online-dot"></div>
+        </div>
+        <div class="doctor-info">
+          <h2>Dr. Michael Chen</h2>
+          <div class="specialty">Neurologist</div>
+          <div class="meta"><i class="fa-solid fa-briefcase" style="color:#444;font-size:11px;"></i> 12+ years &nbsp;·&nbsp; <i class="fa-solid fa-location-dot" style="color:#444;font-size:11px;"></i> Chicago, IL</div>
+          <div class="star-rating">
+            <div class="stars-visual">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="rating-text"><strong>4.9</strong> (312 reviews)</div>
+          </div>
+          <div class="btn-group">
+            <a href="overview.html?id=2" class="btn btn-primary"><i class="fa-solid fa-user"></i> View Profile</a>
+            <a href="book-consultation.html" class="btn btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-box" data-name="dr robert kim" data-specialty="Orthopedic" data-rating="4.7" data-experience="9" data-fee="55" style="display:none;">
+        <div class="doctor-avatar">
+          <img src="doctor5.jpeg" alt="Dr Robert Kim" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        </div>
+        <div class="doctor-info">
+          <h2>Dr. Robert Kim</h2>
+          <div class="specialty">Orthopedic Surgeon</div>
+          <div class="meta"><i class="fa-solid fa-briefcase" style="color:#444;font-size:11px;"></i> 9+ years &nbsp;·&nbsp; <i class="fa-solid fa-location-dot" style="color:#444;font-size:11px;"></i> Houston, TX</div>
+          <div class="star-rating">
+            <div class="stars-visual">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
+            </div>
+            <div class="rating-text"><strong>4.7</strong> (148 reviews)</div>
+          </div>
+          <div class="btn-group">
+            <a href="overview.html?id=3" class="btn btn-primary"><i class="fa-solid fa-user"></i> View Profile</a>
+            <a href="book-consultation.html" class="btn btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-box" data-name="dr lisa thompson" data-specialty="Pediatrician" data-rating="4.8" data-experience="6" data-fee="40" style="display:none;">
+        <div class="doctor-avatar">
+          <img src="doctor4.jpeg" alt="Dr Lisa Thompson" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="online-dot"></div>
+        </div>
+        <div class="doctor-info">
+          <h2>Dr. Lisa Thompson</h2>
+          <div class="specialty">Pediatrician</div>
+          <div class="meta"><i class="fa-solid fa-briefcase" style="color:#444;font-size:11px;"></i> 6+ years &nbsp;·&nbsp; <i class="fa-solid fa-location-dot" style="color:#444;font-size:11px;"></i> Seattle, WA</div>
+          <div class="star-rating">
+            <div class="stars-visual">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="rating-text"><strong>4.8</strong> (203 reviews)</div>
+          </div>
+          <div class="btn-group">
+            <a href="overview.html?id=4" class="btn btn-primary"><i class="fa-solid fa-user"></i> View Profile</a>
+            <a href="book-consultation.html" class="btn btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-box" data-name="dr james wilson" data-specialty="Psychiatrist" data-rating="4.6" data-experience="8" data-fee="65" style="display:none;">
+        <div class="doctor-avatar">
+          <img src="doctor6.jpeg" alt="Dr James Wilson" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        </div>
+        <div class="doctor-info">
+          <h2>Dr. James Wilson</h2>
+          <div class="specialty">Psychiatrist</div>
+          <div class="meta"><i class="fa-solid fa-briefcase" style="color:#444;font-size:11px;"></i> 8+ years &nbsp;·&nbsp; <i class="fa-solid fa-location-dot" style="color:#444;font-size:11px;"></i> Boston, MA</div>
+          <div class="star-rating">
+            <div class="stars-visual">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            </div>
+            <div class="rating-text"><strong>4.6</strong> (96 reviews)</div>
+          </div>
+          <div class="btn-group">
+            <a href="overview.html?id=5" class="btn btn-primary"><i class="fa-solid fa-user"></i> View Profile</a>
+            <a href="book-consultation.html" class="btn btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <h3>No doctors found</h3>
+        <p>Try adjusting your search or filter to find what you're looking for.</p>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="doctor.js"></script>
+</body>
+</html>

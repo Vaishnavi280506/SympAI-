@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmed — MediConnect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body class="page-confirmed">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="doctor.html" class="navbar-logo">
+      <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <span>Symp<em>AI</em></span>
+    </a>
+  </nav>
+
+  <div class="confirmed-card">
+
+    <!-- Animated checkmark -->
+    <div class="confirmed-icon">✓</div>
+
+    <h2>Booking Confirmed!</h2>
+    <p class="subtitle">Your appointment has been successfully booked.<br>We'll see you soon.</p>
+
+    <!-- Booking Details -->
+    <div class="confirmed-details">
+      <div class="det-row">
+        <span><i class="fa-solid fa-user-doctor" style="margin-right:6px;color:#245f37;"></i> Doctor</span>
+        <strong>Dr. Sarah Johnson</strong>
+      </div>
+      <div class="det-row">
+        <span><i class="fa-solid fa-stethoscope" style="margin-right:6px;color:#245f37;"></i> Specialty</span>
+        <strong>Cardiology</strong>
+      </div>
+      <div class="det-row">
+        <span><i class="fa-solid fa-video" style="margin-right:6px;color:#245f37;"></i> Type</span>
+        <strong>Video Call</strong>
+      </div>
+      <div class="det-row">
+        <span><i class="fa-solid fa-calendar" style="margin-right:6px;color:#245f37;"></i> Date & Time</span>
+        <strong>Tomorrow · 11:30 AM</strong>
+      </div>
+      <div class="det-row">
+        <span><i class="fa-solid fa-clock" style="margin-right:6px;color:#245f37;"></i> Duration</span>
+        <strong>30 minutes</strong>
+      </div>
+      <div class="det-row">
+        <span><i class="fa-solid fa-receipt" style="margin-right:6px;color:#245f37;"></i> Amount Paid</span>
+        <strong style="color:#018553;">$50.00</strong>
+      </div>
+    </div>
+
+    <!-- Email confirmation notice -->
+    <div class="email-notice">
+      <i class="fa-solid fa-envelope"></i>
+      A confirmation has been sent to <strong style="color:#fff;">john@example.com</strong>. Check your inbox for the meeting link.
+    </div>
+
+    <!-- Actions -->
+    <div class="confirmed-actions">
+      <a href="doctor.html" class="btn-home">
+         Back to Home
+      </a>
+      <a href="overview.html" class="btn-outline-sm">
+        <i class="fa-solid fa-user-doctor"></i> View Doctor
+      </a>
+    </div>
+
+  </div>
+
+  <script src="doctor.js"></script>
+</body>
+</html>

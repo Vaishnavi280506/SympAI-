@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediConnect — Doctor Profile Overview</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="doctor.html" class="navbar-logo">
+      <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <span>Symp<em>AI</em></span>
+    </a>
+    <a href="doctor.html" class="navbar-back-btn">
+       Back to Doctors
+    </a>
+  </nav>
+
+  <div class="page-wrapper" id="dynamicProfile">
+
+    <div class="breadcrumb">
+      <a href="doctor.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <a href="doctor.html">Doctors</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span class="doc-name-txt">Doctor Profile</span>
+    </div>
+
+    <div class="profile-card">
+      <div class="doctor-header">
+        <img src="" alt="Doctor Avatar" class="doc-img">
+        <div class="doctor-info">
+          <h2 class="doc-name">Doctor Name</h2>
+          <p><i class="fa-solid fa-heart-pulse" style="color:#245f37;"></i> <span class="doc-specialty">Specialty</span></p>
+          <p><i class="fa-solid fa-location-dot" style="color:#245f37;"></i> <span class="doc-location">Location</span></p>
+          <p><i class="fa-solid fa-clock" style="color:#245f37;"></i> Next available: <span class="doc-avail">2:30 PM Today</span></p>
+
+          <div class="doctor-stats">
+            <div class="doc-stat">
+              <div class="ds-num doc-exp">10+</div>
+              <div class="ds-label">Years Exp.</div>
+            </div>
+            <div class="doc-stat">
+              <div class="ds-num doc-rating">4.9★</div>
+              <div class="ds-label">Rating</div>
+            </div>
+            <div class="doc-stat">
+              <div class="ds-num doc-patients">2K+</div>
+              <div class="ds-label">Patients</div>
+            </div>
+            <div class="doc-stat">
+              <div class="ds-num doc-response">98%</div>
+              <div class="ds-label">Response</div>
+            </div>
+          </div>
+
+          <div class="tags doc-tags">
+            <span>English</span>
+          </div>
+
+          <div class="action-buttons">
+            <button onclick="location.href='book-consultation.html'">
+              <i class="fa-solid fa-calendar-check"></i> Book Consultation
+            </button>
+            <button class="btn-ghost"><i class="fa-solid fa-comments"></i> Quick Chat</button>
+            <button class="btn-ghost"><i class="fa-regular fa-heart"></i> Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-card">
+      <div class="tabs">
+        <a href="#" class="active dynamic-tab"><i class="fa-solid fa-user"></i> Overview</a>
+        <a href="#" class="dynamic-tab-avail"><i class="fa-solid fa-calendar-days"></i> Availability</a>
+        <a href="#" class="dynamic-tab-article"><i class="fa-solid fa-newspaper"></i> Articles</a>
+        <a href="#" class="dynamic-tab-reviews"><i class="fa-solid fa-star"></i> Reviews</a>
+      </div>
+
+      <div class="section">
+        <h3>About <span class="doc-firstname">Doctor</span></h3>
+        <p class="doc-about">Biography text placeholder...</p>
+      </div>
+
+      <div class="section">
+        <h3>Specializations</h3>
+        <div class="specializations doc-specs">
+          </div>
+      </div>
+
+      <div class="section">
+        <h3>Certifications</h3>
+        <div class="certifications doc-certs">
+          </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="doctor.js"></script>
+</body>
+</html>

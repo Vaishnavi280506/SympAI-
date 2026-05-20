@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Consultation — Dr. Sarah Johnson</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body class="page-book">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="doctor.html" class="navbar-logo">
+      <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <span>Symp<em>AI</em></span>
+    </a>
+    <a href="doctor.html" class="navbar-back-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back to Doctors
+    </a>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="doctor.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <a href="overview.html">Dr. Sarah Johnson</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Book Consultation</span>
+    </div>
+
+    <div class="book-container">
+
+      <!-- Progress Steps -->
+      <div class="progress-steps">
+        <div class="step active">
+          <div class="step-circle">1</div>
+          <div class="step-label">Choose</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-circle">2</div>
+          <div class="step-label">Details</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-circle">3</div>
+          <div class="step-label">Review</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-circle"><i class="fa-solid fa-check" style="font-size:11px;"></i></div>
+          <div class="step-label">Confirmed</div>
+        </div>
+      </div>
+
+      <!-- Doctor Info -->
+      <div class="book-section">
+        <img src="https://via.placeholder.com/80/245f37/fff?text=SJ" alt="Doctor">
+        <h2>Dr. Sarah Johnson</h2>
+        <p>Cardiology</p>
+        <p style="color:#f5c518;">★★★★★ <span style="color:#888;">4.9 (234 reviews)</span></p>
+      </div>
+
+      <!-- Consultation Type -->
+      <div class="book-section">
+        <h3><i class="fa-solid fa-stethoscope"></i> Choose Consultation Type</h3>
+        <div class="consult-options">
+          <div class="option consult-option" data-type="video">
+            <h4>💻 Video Call</h4>
+            <p>$50 · 30 minutes</p>
+          </div>
+          <div class="option consult-option" data-type="phone">
+            <h4>📞 Phone Call</h4>
+            <p>$40 · 30 minutes</p>
+          </div>
+          <div class="option consult-option" data-type="chat">
+            <h4>💬 Text Chat</h4>
+            <p>Free · 24h response</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Available Time -->
+      <div class="book-section">
+        <h3><i class="fa-solid fa-clock"></i> Select Available Time</h3>
+        <div class="time-options">
+          <div class="option time-slot" data-time="2:30PM">Today · 2:30 PM</div>
+          <div class="option time-slot" data-time="4:00PM">Today · 4:00 PM</div>
+          <div class="option time-slot" data-time="9:00AM">Tomorrow · 9:00 AM</div>
+          <div class="option time-slot" data-time="11:30AM">Tomorrow · 11:30 AM</div>
+          <div class="option time-slot" data-time="2:00PM">Tomorrow · 2:00 PM</div>
+          <div class="option time-slot" data-time="10:00AM">Friday · 10:00 AM</div>
+          <div class="option time-slot" data-time="3:30PM">Friday · 3:30 PM</div>
+          <div class="option time-slot" data-time="11:00AM">Saturday · 11:00 AM</div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="book-submit-row">
+        <button class="btn-back" onclick="location.href='doctor.html'">
+           Back
+        </button>
+        <button class="btn-book" id="continueBtn" disabled onclick="location.href='form.html'">
+          Continue 
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="doctor.js"></script>
+</body>
+</html>
